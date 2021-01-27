@@ -38,7 +38,7 @@ def start_game():
     score = 0
     name = input("please enter your name: ")
     print("Okay {}, Guess a number between one and ten 1-10".format(name))
-    
+      
     the_number = random.randint(1,10)
     while True:
       try:
@@ -46,7 +46,7 @@ def start_game():
         if number == the_number:
           print("WOW! You did it {}! You guessed the number in only {} guesses!".format(name, score))
           print("Thank you for playing {}, you did a super job!".format(name))
-            
+          break  
                 
 
         if number < the_number:
@@ -62,6 +62,7 @@ def start_game():
         elif number >= 11:
           raise ValueError("It seemse like you guessed a number above 10.  Please guess between 1 and 10.")
           print("Current Score: {}".format(score))
+          continue
         #else:
           #print("I don't think that is a number...")
     
